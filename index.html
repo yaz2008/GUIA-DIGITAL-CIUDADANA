@@ -33,7 +33,32 @@
       nav ul li a:hover {
       background: #D2B4DE; /* Cambia el fondo al pasar el raton */
       }
-  //MODIFICAR
+
+      /* --- ESTILO DEL SUBMENU ---*/
+      nav ul li ul{
+        display: none;      /* ocultar el submenu por defecto */
+        position: absolute; /* posiciona el sub menu relativo al padre */
+        top: 100%;          /* lo coloca justo de bajo del elemento padre */
+        left: 0;            /* alineado a la izquierda */
+        background: #ECF0F1;   /* fondo del submenu */
+        padding: 0;         /* sin espacio interno */
+        min-width: 180px;       /* ancho minimo del submenu */
+     }  
+     nav ul li ul li a {
+      padding: 10px 15px;   /*espaciado interno en las opciones */
+     }
+     nav ul li ul li a:hover{
+      background: #82E0AA;     /* color mas claro al pasra el raton */
+     }
+
+     /* --- MOSTRAR EL SUBMENU --- */
+     nav ul li:hover > ul {
+      display: block; /* cuando paso el raton sobre el <li>, muetra el submenu/
+     }
+   </style>
+ </head>
+<body>
+    //MODIFICAR
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
@@ -66,31 +91,6 @@ EN EL VIDEO MODIFICAR PARA AJUSTAR CUALDO SE REQUIERA:
         title="Video desde Google Drive">
 </iframe>
 
-
-      /* --- ESTILO DEL SUBMENU ---*/
-      nav ul li ul{
-        display: none;      /* ocultar el submenu por defecto */
-        position: absolute; /* posiciona el sub menu relativo al padre */
-        top: 100%;          /* lo coloca justo de bajo del elemento padre */
-        left: 0;            /* alineado a la izquierda */
-        background: #ECF0F1;   /* fondo del submenu */
-        padding: 0;         /* sin espacio interno */
-        min-width: 180px;       /* ancho minimo del submenu */
-     }  
-     nav ul li ul li a {
-      padding: 10px 15px;   /*espaciado interno en las opciones */
-     }
-     nav ul li ul li a:hover{
-      background: #82E0AA;     /* color mas claro al pasra el raton */
-     }
-
-     /* --- MOSTRAR EL SUBMENU --- */
-     nav ul li:hover > ul {
-      display: block; /* cuando paso el raton sobre el <li>, muetra el submenu/
-     }
-   </style>
- </head>
-<body>
       <!--Menu principal-->
       <nav>
         <ul>
@@ -169,6 +169,7 @@ EN EL VIDEO MODIFICAR PARA AJUSTAR CUALDO SE REQUIERA:
     
    </center>
 </body>
+
 </html>
 
  
