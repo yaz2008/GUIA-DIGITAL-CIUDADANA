@@ -82,6 +82,26 @@
     ol {
       margin: 10px 0 10px 25px;
     }
+
+    /* --- VIDEO RESPONSIVO --- */
+    .video-container {
+      position: relative;
+      width: 100%;
+      max-width: 900px;
+      margin: auto;
+      padding-bottom: 56.25%; /* Proporción 16:9 */
+      height: 0;
+    }
+
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
   </style>
 </head>
 <body>
@@ -118,17 +138,20 @@
         <li>Consejos para una convivencia responsable y solidaria.</li>
       </ol>
     </section>
-      <!-- Video desde Google Drive -->
-    <iframe src="https://drive.google.com/file/d/1vCxzGIlI7Oz0Ver1YUCqpw3nxZSEBCGJ/preview"
-            width="640" height="360" allow="autoplay; encrypted-media"
-            title="Video desde Google Drive">
-    </iframe>
 
+    <!-- Video responsivo -->
+    <div class="video-container">
+      <iframe 
+        src="https://drive.google.com/file/d/1vCxzGIlI7Oz0Ver1YUCqpw3nxZSEBCGJ/preview"
+        allow="autoplay; encrypted-media"
+        title="Video desde Google Drive">
+      </iframe>
+    </div>
 
   </main>
 
   <footer>
-    <p> 2025 Guía Ciudadana | Información para una mejor comunidad</p>
+    <p>2025 Guía Ciudadana | Información para una mejor comunidad</p>
   </footer>
 </body>
 </html>
