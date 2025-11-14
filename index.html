@@ -1,159 +1,171 @@
-<!DOCTYPE html> <!-- Indica que el documento es HTML5 -->
-<script src="alerta.js"></script>
-<html lang="es"> <! -- Documento en español -->
-<head> 
- <meta charset="UTF-8"> <!-- Codificación de caracteres (acentos, ñ, etc.) -->
- <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ajusta el diseño a móviles -->
- <title>GUIA DIGITAL CIUDADANA</title> <!-- Título que aparece en la pestaña -->
- <style>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GUIA DIGITAL CIUDADANA</title>
+  <script src="alerta.js"></script>
 
-   body {
-      margin: 0; /*Elimina margenes por defecto */
-      font-famyli: Arial, sans-serif; /*Fuente del texto */
-     }
-     /* ---- ESTILO DEL MENU PRINCIPAL ---- */
-  @media (max-width: 600px) {
-  body {
-    padding: 10px;
-  }
-  main {
-    padding: 10px;
-  }
-  h1, h2 {
-    font-size: 1.2em;
-    text-align: center;
-  }
-  iframe {
-    width: 100%;
-    height: 200px;
-  }
-}
-  
-      nav{
-      background: #D29BFD; /* Fondo gris oscuro */
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Ajustes generales para móviles */
+    @media (max-width: 600px) {
+      body, main {
+        padding: 10px;
+      }
+      h1, h2 {
+        font-size: 1.2em;
+        text-align: center;
+      }
+      iframe {
+        width: 100%;
+        height: 200px;
       }
       nav ul {
-       list-style: none; /* Quita viñetas de la lista */
-       margin: 0; /* Elimina margenes */
-       padding: 0; /* Elimina relleno */
-       display: flex;  /* Coloca los  <li> en linea (horizontal) */
+        flex-direction: column;
       }
       nav ul li {
-      position: relative; /*Necesario para posicionar el submenu debajo */
+        width: 100%;
       }
       nav ul li a {
-      display: block; /*Hace que todo el area se clickeable */
-      padding: 15px 20px; /*Espacio interno */
-      color: white; /Texto blanco/
-      text-decoration: none; /* Quita el subrayado */
+        text-align: center;
       }
-      nav ul li a:hover {
-      background: #D2B4DE; /* Cambia el fondo al pasar el raton */
+      img[align="left"] {
+        display: block;
+        margin: auto;
       }
+    }
 
-      /* --- ESTILO DEL SUBMENU ---*/
-      nav ul li ul{
-        display: none;      /* ocultar el submenu por defecto */
-        position: absolute; /* posiciona el sub menu relativo al padre */
-        top: 100%;          /* lo coloca justo de bajo del elemento padre */
-        left: 0;            /* alineado a la izquierda */
-        background: #ECF0F1;   /* fondo del submenu */
-        padding: 0;         /* sin espacio interno */
-        min-width: 180px;       /* ancho minimo del submenu */
-     }  
-     nav ul li ul li a {
-      padding: 10px 15px;   /*espaciado interno en las opciones */
-     }
-     nav ul li ul li a:hover{
-      background: #82E0AA;     /* color mas claro al pasra el raton */
-     }
+    nav {
+      background: #D29BFD;
+      width: 100%;
+    }
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    nav ul li {
+      position: relative;
+    }
+    nav ul li a {
+      display: block;
+      padding: 15px 20px;
+      color: white;
+      text-decoration: none;
+    }
+    nav ul li a:hover {
+      background: #D2B4DE;
+    }
 
-     /* --- MOSTRAR EL SUBMENU --- */
-     nav ul li:hover > ul {
-      display: block; /* cuando paso el raton sobre el <li>, muetra el submenu/
-     }
-   </style>
+    /* Submenús */
+    nav ul li ul {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: #ECF0F1;
+      padding: 0;
+      min-width: 180px;
+      z-index: 999;
+    }
+    nav ul li ul li a {
+      padding: 10px 15px;
+      color: black;
+    }
+    nav ul li ul li a:hover {
+      background: #82E0AA;
+    }
+    nav ul li:hover > ul {
+      display: block;
+    }
+
+    /* Centrado y ajuste de imágenes grandes */
+    .img-full {
+      width: 100%;
+      max-width: 1550px;
+      height: auto;
+      display: block;
+      margin: auto;
+    }
+
+    center a {
+      font-size: 1.2em;
+      word-wrap: break-word;
+    }
+  </style>
 </head>
- <body>
-      <!--Menu principal-->
-      <nav>
+
+<body>
+  <nav>
+    <ul>
+      <img src="LOGOCECY.png" width="90" height="80" style="margin-right:10px;">
+
+      <form method="get" action="https://www.google.com/search" target="_blank" style="display:flex; align-items:center; gap:5px;">
+        <input type="search" name="q" placeholder="Introducir búsqueda" required>
+        <input type="submit">
+      </form>
+
+      <li><a href="guia.html">BIENVENIDO</a></li>
+      <li><a href="ciudadano.html">CIUDADANO</a></li>
+      <li><a href="informacion.html">INFORMACION</a></li>
+
+      <li>
+        <a href="TRAMITE.html">TRAMITE</a>
         <ul>
-        <img  src="LOGOCECY.png" align="left" width="90"height="80">
-        
-         <p></p><form method="get" action="https://www.google.com/search" target="_blank" >
-   <input type="search" name="q" placeholder="Introducir búsqueda" autofocus required>
-   <input type="submit"></p>
-         </form>
-          <li>
-           <p><a href="guia.html">BIENVENIDO</a></p> <!-- Flecha indicando submenu-->
-          
-          </li>
-         
-        <li>
-           <p><a href="ciudadano.html">CIUDADANO</a></p> <!-- Flecha indicando submenu-->
-           
-          </li>
+          <li><a href="Tramites.html">Tramites administrativos</a></li>
+          <li><a href="Gestionar_yaz.php">Gestionar tramite</a></li>
+          <li><a href="#">.......</a></li>
+          <li><a href="#">.......</a></li>
+        </ul>
+      </li>
 
-           <li>
-           <p><a href="informacion.html">INFORMACION</a></p> <!-- Flecha indicando submenu-->
-           
-          </li>
-        
-          <!--Elemento simple sin submenu-->
-          <li>
-           <p><a href="TRAMITE.html">TRAMITE</a></p><!-- Flecha indicando submenu-->
-            <ul>
-              <li><p><a href="Tramites.html">Tramites administrativos</a></p></li>
-              <li><p><a href="Gestionar_yaz.php">Gestionar tramite</a></p></li>
-              <li><a href="#">.......</a></li>
-              <li><a href="#">.......</a></li>
-            </ul>
-          </li>
-          <!--Elemento con submenu-->
-          <li>
-           <p><a href="SOLICITUD.html">SOLICITUD</a></p> <!-- Flecha indicando submenu-->
-            
-          </li>
-          <!--Elemento con submenu-->
-          <li>
-            <p><a href="PAGO.html">PAGO</a></p> <!-- Flecha indicando submenu-->
-             <ul>
-              <li><p><a href="pago.html">Servicios y derechos</a></p></li>
-              <li><a href="pagociudadano.html">Pago ciudadano</a></li>
-              <li><a href="#">.......</a></li>
-            </ul>
-          </li>
-        
-          <li>  
-           <p> <a href="#">DOCUMENTOS</a> </p> <!-- Flecha indicando submenu-->
-            <ul>
-              <li><a href="Galeria.html">GALERIA</a></li>
-              <li><a href="#">.......</a></li>
-              <li><a href="#">.......</a></li>
-            </ul>
-          </li>
-          <li>
+      <li><a href="SOLICITUD.html">SOLICITUD</a></li>
 
-           <p> <a href="#">VISITANTES</a> </p> <!-- Flecha indicando submenu-->
-           <ul>
-            <li><a href="index_visit.php">REGISTRO</a></li>
-          </ul>
-          </li>
-           <a href="index_dudas.php"><img  src="signo.png" align="left" width="80"height="70"></a>
-    </nav> 
-      <center>
-<strong><H1><a HREF=" https://share.google/Q5YCviwYntzpR3B4T ">PORTAL AYUNTAMIENTO VALLE DE BRAVO 2025</a><p></strong>
-       
-<a href="https://drive.google.com/uc?export=download&id=1xApFMtD8a-QzIFmVxxqwvs0rOD1oLndq" download>TRAMITE</a>
+      <li>
+        <a href="PAGO.html">PAGO</a>
+        <ul>
+          <li><a href="pago.html">Servicios y derechos</a></li>
+          <li><a href="pagociudadano.html">Pago ciudadano</a></li>
+          <li><a href="#">.......</a></li>
+        </ul>
+      </li>
 
+      <li>
+        <a href="#">DOCUMENTOS</a>
+        <ul>
+          <li><a href="Galeria.html">GALERIA</a></li>
+          <li><a href="#">.......</a></li>
+          <li><a href="#">.......</a></li>
+        </ul>
+      </li>
 
-<strong><H1><a HREF="viv.html ">GUIA DIGITAL</a><p></strong> 
-<img  src="tar.png" align="left" width="1550"> 
-    </nav> 
-    
-   </center>
+      <li>
+        <a href="#">VISITANTES</a>
+        <ul>
+          <li><a href="index_visit.php">REGISTRO</a></li>
+        </ul>
+      </li>
+
+      <a href="index_dudas.php"><img src="signo.png" width="80" height="70"></a>
+    </ul>
+  </nav>
+
+  <center>
+    <h1><a href="https://share.google/Q5YCviwYntzpR3B4T">PORTAL AYUNTAMIENTO VALLE DE BRAVO 2025</a></h1>
+
+    <a href="https://drive.google.com/uc?export=download&id=1xApFMtD8a-QzIFmVxxqwvs0rOD1oLndq" download>TRAMITE</a>
+
+    <h1><a href="viv.html">GUIA DIGITAL</a></h1>
+
+    <img src="tar.png" class="img-full">
+  </center>
 </body>
-
 </html>
-
- 
