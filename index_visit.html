@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>VISITANTES</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="estilos_visit.css">
+</head>
+<body>
+        <hr width="100%">
+    <font face="calibri" size=20 color=PINK>GUIA CIUDADANA VISITANTES</font>
+    <form method="post">
+        <h2>- REGISTRAR VISITANTES - </h2>  
+        <input type="text" name="NOMBRE" placeholder="Nombre">
+        <input type="text" name="A_PATERNO" placeholder="Apellido paterno">
+        <input type="text" name="A_MATERNO" placeholder="Apellido materno">
+        <input type="text" name="LOCALIDAD_COMUNIDAD" placeholder="Localidad_comunidad">
+        <input type="text" name="MUNICIPIO" placeholder="Municipio">
+        <input type="submit" name="guia_ciudadana">
+    </form>
+    
+    <?php
+        include("registro_visit.php");
+  ?>
+</body>
+</html>
