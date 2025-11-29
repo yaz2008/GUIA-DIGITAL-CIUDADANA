@@ -12,9 +12,10 @@
             font-family: Arial, sans-serif;
         }
 
-        /* ---- MENÚ PRINCIPAL ---- */
+        /* ------- MENÚ PRINCIPAL -------- */
         nav {
             background: #28B463;
+            width: 100%;
         }
 
         nav ul {
@@ -22,51 +23,52 @@
             margin: 0;
             padding: 0;
             display: flex;
+            flex-wrap: wrap; /* PARA QUE EN CELULAR BAJE EN COLUMNAS */
         }
 
         nav ul li {
             position: relative;
+            width: 100%; /* MENÚ COMPLETO EN CELULAR */
         }
 
         nav ul li a {
             display: block;
-            padding: 10px 15px;
+            padding: 12px;
             color: white;
             text-decoration: none;
+            font-size: 1rem;
         }
 
         nav ul li a:hover {
             background: #D2B4DE;
         }
 
-        /* ---- SUBMENÚ ---- */
+        /* ------- SUBMENÚ ------- */
         nav ul li ul {
             display: none;
-            position: absolute;
-            top: 100%;
-            left: 0;
+            position: relative; /* PARA QUE EN CELULAR NO SE MONTE ENCIMA */
             background: #444;
+            width: 100%;
             padding: 0;
-            min-width: 180px;
         }
 
         nav ul li ul li a {
             padding: 10px;
+            font-size: 0.95rem;
         }
 
         nav ul li ul li a:hover {
             background: #82E0AA;
         }
 
-        /* Mostrar submenu */
+        /* MOSTRAR SUBMENÚ */
         nav ul li:hover > ul {
             display: block;
         }
 
-        /* Imagen grande inferior */
+        /* IMAGEN ADAPTADA */
         .img-full {
             width: 100%;
-            max-width: 1550px;
             height: auto;
             display: block;
             margin: auto;
@@ -75,6 +77,23 @@
         center a {
             font-size: 1.2em;
             word-wrap: break-word;
+        }
+
+        /* --- PARA PANTALLAS GRANDES (TABLET / PC) --- */
+        @media (min-width: 768px) {
+            nav ul {
+                display: flex;
+                flex-wrap: nowrap;
+            }
+
+            nav ul li {
+                width: auto;
+            }
+
+            nav ul li ul {
+                position: absolute;
+                width: 180px;
+            }
         }
     </style>
 </head>
