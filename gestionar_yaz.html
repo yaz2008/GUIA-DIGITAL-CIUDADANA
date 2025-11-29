@@ -1,138 +1,156 @@
-<!DOCTYPE html> <!-- Doc en html -->
-<html lang="es"> <!-- Doc en español -->
+<!DOCTYPE html>
+<html lang="es">
+
 <head>
- <meta charset="UTF-8"> <!--codifica caracteres (acentos, ñ, etc.) -->
- <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Ajusta el diseño a móviles-->
- <title>Gestionar</title> <!-- Título que aparece en la pestaña -->
- <style>
-   body{
-     margin: 0; /* Elimina márgenes por defecto */
-     font-family: Arial, sans-serif; /* Fuente del texto */
-   }
-   /* ---- ESTILO DEL MENÚ PRINCIPAL ---- */
-   nav {
-    background: #28B463; /* Fondo gris oscuro */
-   }
-   nav ul {
-     list-style: none; /* Quita viñetas de la lista */
-     margin: 0; /* Elimina márgenes */
-     padding: 0; /* Elimina relleno */
-     display: flex; /* Coloca los <li> en linea (horizontal) */
-   }
-   nav ul li {
-     position: relative; /* Necesario para posicionar el submenú debajo */
-   }
-   nav ul li a {
-     display: block; /* Hace que todo el área sea clickeable */
-     padding: 10px 15px; /* Espaciado interno */
-     color: white; /* Texto blanco */
-     text-decoration: none; /* Quita lo subrayado */
-   }
-   nav ul li a:hover {
-    background: #D2B4DE; /* Cambia el fondo al pasar el ratón */
-   }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestionar</title>
 
-    /* ----Estilo del submenú----*/
-    nav ul li ul {
-        display: none;       /* Ocultar el submenu por defecto */
-        position: absolute;  /* Posiciona el submenu relativo al padre */
-        top: 100%;           /* Lo coloca justo debajo del elemento padre */
-        left: 0;             /* Alineado a la izquierda */
-        background: #444;    /* Fondo de submenu */
-        padding: 0;          /* Sin espacio interno */
-        min-width: 180px;        /* Ancho minimo del submenu */
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
         }
-            nav ul li ul li a {
-                padding: 10px 10px; /* Espaciado interno en las opciones */
+
+        /* ---- MENÚ PRINCIPAL ---- */
+        nav {
+            background: #28B463;
         }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            position: relative;
+        }
+
+        nav ul li a {
+            display: block;
+            padding: 10px 15px;
+            color: white;
+            text-decoration: none;
+        }
+
+        nav ul li a:hover {
+            background: #D2B4DE;
+        }
+
+        /* ---- SUBMENÚ ---- */
+        nav ul li ul {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: #444;
+            padding: 0;
+            min-width: 180px;
+        }
+
+        nav ul li ul li a {
+            padding: 10px;
+        }
+
         nav ul li ul li a:hover {
-            background: #82E0AA;    /* Color mas claro al pasar el raton */
+            background: #82E0AA;
         }
 
-        /* ---- MOSTRAR EL SUBMENU ---- */
+        /* Mostrar submenu */
         nav ul li:hover > ul {
-            display: block; /* Cuando paso el raton sobre el <li>, muestra el submenu */
+            display: block;
         }
-  /* Centrado y ajuste de imágenes grandes */
-    .img-full {
-      width: 100%;
-      max-width: 1550px;
-      height: auto;
-      display: block;
-      margin: auto;
-    }
 
-    center a {
-      font-size: 1.2em;
-      word-wrap: break-word;
-    }
- 
+        /* Imagen grande inferior */
+        .img-full {
+            width: 100%;
+            max-width: 1550px;
+            height: auto;
+            display: block;
+            margin: auto;
+        }
+
+        center a {
+            font-size: 1.2em;
+            word-wrap: break-word;
+        }
     </style>
 </head>
+
 <body>
+
     <!-- Menú principal -->
     <nav>
         <ul>
-         <li>
-           <p><a href="https://share.google/cOGV01JM8DlNb2Whd">ACTA DE NACIMIENTO</a></p> <!-- Flecha indicando submenu-->
-           <ul>
-            <li><a href="actaquees.html">¿Qué es el acta de nacimiento?</a></li>
-            <li><p><a href="https://www.gob.mx/ActaNacimiento/folioSeguimiento/">Buscar por folio</a></p></li>
-            <li><a href="#">.......</a></li>
-        </ul>
-        </li>
-        <!--Elemento con submenu-->
-           <li>
-           <p><a href="https://share.google/aNffftRird8Vk6fXm ">CURP</a></p> <!-- Flecha indicando submenu-->
-           <ul>
-            <li><a href="queescurp.html">¿Qué es la CURP?</a></li>
-            <li><a href="#">.......</a></li>
-        </ul>  
-          </li>
 
-           <li>
-           <p><a href="https://share.google/7ZWnSaU9mCdwy5HCt ">LICENCIA DE CONDUCIR</a></p> <!-- Flecha indicando submenu-->  
-          <ul>
-            <li><a href="queeslicencia.html">¿Qué es licencia de conducir?</a></li>
-            <li><p><a href="https://smovilidad.edomex.gob.mx/citas_internet">Agendar cita</a></p></li>
-            <li><a href="#">.......</a></li>
-        </ul>
-        <li>
-           <p><a href=" https://share.google/D3IEMuwBrTL2FHDaa  ">SAT</a></p> <!-- Flecha indicando submenu--> 
-           <ul>
-             <li><a href="queessat.html">¿Qué es el SAT?</a></li>
-            <li><a href="https://citas.sat.gob.mx/">Agendar cita</a></li>
-            <li><a href="https://share.google/kg2M34giuzqjyeFCn ">RFC</a></li>
-            <li><a href="https://share.google/XewbSv71jWmGKOI32 ">Constancia de situación fiscal</a>
-            <li><p><a href=" https://share.google/cjTLGDloj8WC7sskx ">Declaración personas fisicas</a></p></li>
+            <!-- ACTA DE NACIMIENTO -->
+            <li>
+                <a href="https://share.google/cOGV01JM8DlNb2Whd">ACTA DE NACIMIENTO</a>
+                <ul>
+                    <li><a href="actaquees.html">¿Qué es el acta de nacimiento?</a></li>
+                    <li><a href="https://www.gob.mx/ActaNacimiento/folioSeguimiento/">Buscar por folio</a></li>
+                    <li><a href="#">.......</a></li>
+                </ul>
             </li>
-        </ul> 
-          </li>
 
-          <li>
-           <p><a href="https://share.google/bEhPbZOFD9ReqhYrG  ">REGISTRO CIVIL</a></p> <!-- Flecha indicando submenu--> 
-           <ul>
-            <li><p><a href="queesregistro.html">¿Qué es registro civil</a></p></li>
-            <li><a href="#">.......</a></li>
-            <li><a href="#">.......</a></li>
-        </ul>
-       </li>
-       <li>
-           <p><a href=" https://share.google/xf8e4fKcFUgO9Znsu ">PASAPORTE</a></p> <!-- Flecha indicando submenu-->
-           <ul> 
-            <li><a href="pasaportequees.html">¿Qué es pasaporte?</a></li> 
-        </ul>
-          </li>
-    </li>
-  </ul>
-    
-  </nav>
- 
-     <center>
-    
-      <img  src="imgtra.png" class="img-full">
+            <!-- CURP -->
+            <li>
+                <a href="https://share.google/aNffftRird8Vk6fXm">CURP</a>
+                <ul>
+                    <li><a href="queescurp.html">¿Qué es la CURP?</a></li>
+                    <li><a href="#">.......</a></li>
+                </ul>
+            </li>
 
-    
-      </center>  
+            <!-- LICENCIA -->
+            <li>
+                <a href="https://share.google/7ZWnSaU9mCdwy5HCt">LICENCIA DE CONDUCIR</a>
+                <ul>
+                    <li><a href="queeslicencia.html">¿Qué es licencia de conducir?</a></li>
+                    <li><a href="https://smovilidad.edomex.gob.mx/citas_internet">Agendar cita</a></li>
+                    <li><a href="#">.......</a></li>
+                </ul>
+            </li>
+
+            <!-- SAT -->
+            <li>
+                <a href="https://share.google/D3IEMuwBrTL2FHDaa">SAT</a>
+                <ul>
+                    <li><a href="queessat.html">¿Qué es el SAT?</a></li>
+                    <li><a href="https://citas.sat.gob.mx/">Agendar cita</a></li>
+                    <li><a href="https://share.google/kg2M34giuzqjyeFCn">RFC</a></li>
+                    <li><a href="https://share.google/XewbSv71jWmGKOI32">Constancia de situación fiscal</a></li>
+                    <li><a href="https://share.google/cjTLGDloj8WC7sskx">Declaración personas físicas</a></li>
+                </ul>
+            </li>
+
+            <!-- REGISTRO CIVIL -->
+            <li>
+                <a href="https://share.google/bEhPbZOFD9ReqhYrG">REGISTRO CIVIL</a>
+                <ul>
+                    <li><a href="queesregistro.html">¿Qué es registro civil?</a></li>
+                    <li><a href="#">.......</a></li>
+                    <li><a href="#">.......</a></li>
+                </ul>
+            </li>
+
+            <!-- PASAPORTE -->
+            <li>
+                <a href="https://share.google/xf8e4fKcFUgO9Znsu">PASAPORTE</a>
+                <ul>
+                    <li><a href="pasaportequees.html">¿Qué es pasaporte?</a></li>
+                </ul>
+            </li>
+
+        </ul>
+    </nav>
+
+    <center>
+        <img src="imgtra.png" class="img-full">
+    </center>
+
 </body>
- </html>
+
+</html>
