@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DUDAS</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="estilo_dudas.css">
+</head>
+<body>    
+    <font face="calibri" size=15 color=green>BIENVENIDO A NUESTRO ESPACIO DE CONTACTO</font>
+    <hr width="100%">
+    
+    <font face="calibri" size=20 color=blue>¿REQUIERE INFORMACIÓN ADICIONAL?</font>
+    <form method="post">
+        <h2>-COMPARTENOS SU COMENTARIO O PREGUNTA- </h2>  
+        <input type="text" name="NOMBRE_COMPLETO" placeholder="Nombre_completo">
+        <input type="text" name="MUNICIPIO" placeholder="Municipio">
+        <input type="email" name="CORREO_ELECTRONICO" placeholder="Correo_electronico">
+        <input type="text" name="TRAMITE" placeholder="Tramite">
+        <input type="text" name="DUDA ESPECIFICA" placeholder="Duda especifica">
+        <input type="submit" name="lista_asistencia">
+    </form>
+    
+    <?php
+        include("registro_dudas.php");
+  ?>
+</body>
+</html>
