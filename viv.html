@@ -3,18 +3,34 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>video</title>
+  <title>Video</title>
+
   <style>
     body {
-     
-   /* --- VIDEO RESPONSIVO --- */
+      margin: 0;
+      padding: 20px;
+      background: #f4f4f4;
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 40px;
+      color: #222;
+      margin-bottom: 30px;
+    }
+
+    /* --- VIDEO RESPONSIVO Y GRANDE --- */
     .video-container {
       position: relative;
-      width: 100%;
-      max-width: 900px;
+      width: 90%;
+      max-width: 1200px; /* MÁS GRANDE */
       margin: auto;
       padding-bottom: 56.25%; /* Proporción 16:9 */
       height: 0;
+      box-shadow: 0 0 15px rgba(0,0,0,0.3);
+      border-radius: 10px;
+      overflow: hidden;
     }
 
     .video-container iframe {
@@ -25,21 +41,20 @@
       height: 100%;
       border: none;
     }
-      </style>
+  </style>
 </head>
-<body>
-   <H1>GUIA DIGITAL CIUDADANA</H1>
-        </center> 
-                <center> 
-           <!-- Video responsivo -->
-    <div class="video-container">
-      <iframe 
-        src="https://drive.google.com/file/d/1dAT8-x_8EOklRGClZmnEfup-9Y1UgUvG/preview"
-        allow="autoplay; encrypted-media"
-        title="Video desde Google Drive">
-      </iframe>
-    </div>
 
 <body>
+
+  <h1>GUÍA DIGITAL CIUDADANA</h1>
+
+  <div class="video-container">
+    <iframe 
+      src="https://drive.google.com/file/d/1dAT8-x_8EOklRGClZmnEfup-9Y1UgUvG/preview"
+      allow="autoplay; encrypted-media"
+      title="Video desde Google Drive">
+    </iframe>
+  </div>
+
+</body>
 </html>
-     
