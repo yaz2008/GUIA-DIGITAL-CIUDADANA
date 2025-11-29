@@ -1,0 +1,132 @@
+<!DOCTYPE html> <!-- Doc en html -->
+<html lang="es"> <!-- Doc en español -->
+<head>
+ <meta charset="UTF-8"> <!--codifica caracteres (acentos, ñ, etc.) -->
+ <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Ajusta el diseño a móviles-->
+ <title>DATOS</title> <!-- Título que aparece en la pestaña -->
+ <style>
+   body{
+     margin: 0; /* Elimina márgenes por defecto */
+     font-family: Arial, sans-serif; /* Fuente del texto */
+   }
+   /* ---- ESTILO DEL MENÚ PRINCIPAL ---- */
+   nav {
+    background: #28B463; /* Fondo gris oscuro */
+   }
+   nav ul {
+     list-style: none; /* Quita viñetas de la lista */
+     margin: 0; /* Elimina márgenes */
+     padding: 0; /* Elimina relleno */
+     display: flex; /* Coloca los <li> en linea (horizontal) */
+   }
+   nav ul li {
+     position: relative; /* Necesario para posicionar el submenú debajo */
+   }
+   nav ul li a {
+     display: block; /* Hace que todo el área sea clickeable */
+     padding: 10px 15px; /* Espaciado interno */
+     color: white; /* Texto blanco */
+     text-decoration: none; /* Quita lo subrayado */
+   }
+   nav ul li a:hover {
+    background: #D2B4DE; /* Cambia el fondo al pasar el ratón */
+   }
+
+    /* ----Estilo del submenú----*/
+    nav ul li ul {
+        display: none;       /* Ocultar el submenu por defecto */
+        position: absolute;  /* Posiciona el submenu relativo al padre */
+        top: 100%;           /* Lo coloca justo debajo del elemento padre */
+        left: 0;             /* Alineado a la izquierda */
+        background: #444;    /* Fondo de submenu */
+        padding: 0;          /* Sin espacio interno */
+        min-width: 180px;        /* Ancho minimo del submenu */
+        }
+            nav ul li ul li a {
+                padding: 10px 10px; /* Espaciado interno en las opciones */
+        }
+        nav ul li ul li a:hover {
+            background: #82E0AA;    /* Color mas claro al pasar el raton */
+        }
+
+        /* ---- MOSTRAR EL SUBMENU ---- */
+        nav ul li:hover > ul {
+            display: block; /* Cuando paso el raton sobre el <li>, muestra el submenu */
+        }
+    </style>
+</head>
+<body>
+    <!-- Menú principal -->
+    <nav>
+        <ul>
+         <li>
+           <p><a href="https://share.google/cOGV01JM8DlNb2Whd">ACTA DE NACIMIENTO</a></p> <!-- Flecha indicando submenu-->
+           <ul>
+            <li><a href="actaquees.html">¿Qué es el acta de nacimiento?</a></li>
+            <li><p><a href="https://www.gob.mx/ActaNacimiento/folioSeguimiento/">Buscar por folio</a></p></li>
+            <li><a href="#">.......</a></li>
+        </ul>
+        </li>
+        <!--Elemento con submenu-->
+           <li>
+           <p><a href="https://share.google/aNffftRird8Vk6fXm ">CURP</a></p> <!-- Flecha indicando submenu-->
+           <ul>
+            <li><a href="queescurp.html">¿Qué es la CURP?</a></li>
+            <li><a href="#">.......</a></li>
+        </ul>  
+          </li>
+
+           <li>
+           <p><a href="https://share.google/7ZWnSaU9mCdwy5HCt ">LICENCIA DE CONDUCIR</a></p> <!-- Flecha indicando submenu-->  
+          <ul>
+            <li><a href="queeslicencia.html">¿Qué es licencia de conducir?</a></li>
+            <li><p><a href="https://smovilidad.edomex.gob.mx/citas_internet">Agendar cita</a></p></li>
+            <li><a href="#">.......</a></li>
+        </ul>
+        <li>
+           <p><a href=" https://share.google/D3IEMuwBrTL2FHDaa  ">SAT</a></p> <!-- Flecha indicando submenu--> 
+           <ul>
+             <li><a href="queessat.html">¿Qué es el SAT?</a></li>
+            <li><a href="https://citas.sat.gob.mx/">Agendar cita</a></li>
+            <li><a href="https://share.google/kg2M34giuzqjyeFCn ">RFC</a></li>
+            <li><a href="https://share.google/XewbSv71jWmGKOI32 ">Constancia de situación fiscal</a>
+            <li><p><a href=" https://share.google/cjTLGDloj8WC7sskx ">Declaración personas fisicas</a></p></li>
+            </li>
+        </ul> 
+          </li>
+
+          <li>
+           <p><a href="https://share.google/bEhPbZOFD9ReqhYrG  ">REGISTRO CIVIL</a></p> <!-- Flecha indicando submenu--> 
+           <ul>
+            <li><p><a href="queesregistro.html">¿Qué es registro civil</a></p></li>
+            <li><a href="#">.......</a></li>
+            <li><a href="#">.......</a></li>
+        </ul>
+       </li>
+       <li>
+           <p><a href=" https://share.google/xf8e4fKcFUgO9Znsu ">PASAPORTE</a></p> <!-- Flecha indicando submenu-->
+           <ul> 
+            <li><a href="pasaportequees.html">¿Qué es pasaporte?</a></li> 
+        </ul>
+          </li>
+    </li>
+  </ul>
+    
+  </nav>
+  
+    <p>
+         <center> 
+         "El siguiente video muestra ejemplos de tramites adminitrativos "
+
+        </center> 
+                <center> 
+           <video class="video" aling="center" width="500" height="500" controls><source src="VIDEO4.MP4"
+
+type="video/mp4"></video>
+     <center>
+    
+      <img  src="imgtra.png" align="left" width="1510">
+
+    
+      </center>  
+</body>
