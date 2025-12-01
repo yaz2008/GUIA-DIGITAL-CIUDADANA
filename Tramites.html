@@ -1,4 +1,4 @@
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -7,9 +7,33 @@
     <link rel="stylesheet" href="principal.css">
     <link rel="icon" href="img/unnamed-removebg-preview.png" type="png">
     <a href="OPDAPAS.html"></a>
- 
+
     <style>
-   
+
+        /* 🔷 ESTILO DE HEXÁGONOS AÑADIDO */
+        .hex{
+            width: 160px;
+            height: 140px;
+            clip-path: polygon(
+                50% 0%,
+                93% 25%,
+                93% 75%,
+                50% 100%,
+                7% 75%,
+                7% 25%
+            );
+            overflow: hidden;
+            margin: auto;
+        }
+
+        .hex img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* TUS ESTILOS IGUALITOS, NO LOS MOVÍ */
+
         .fondo-valle{
             background-image: linear-gradient(to top, #0593bb 20%, #0e26ae 80%);
             background-size: cover;
@@ -17,7 +41,7 @@
             width: 100%;
             height: 80vh;
             background-attachment: fixed;
-          }
+        }
         .contenido-fondo-valle{
             display: flex;
             width: 100%;
@@ -25,149 +49,133 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-          }
-      @keyframes move_wave {
-          0% {
-              transform: translateX(0) translateZ(0) scaleY(1)
-          }
-          50% {
-              transform: translateX(-25%) translateZ(0) scaleY(0.55)
-          }
-          100% {
-              transform: translateX(-50%) translateZ(0) scaleY(1)
-          }
-      }
-      .waveWrapper {
-          overflow: hidden;
-          position: absolute;
-          left: 0;
-          right: 0;
-          bottom: 0;
-          top: 0;
-          margin: auto;
-      }
-      .waveWrapperInner {
-          position: absolute;
-          width: 100%;
-          overflow: hidden;
-          height: 70%;
-    
-          
-      }
-      .bgTop {
-          z-index: 15;
-          opacity: 0.5;
-      }
-      .bgMiddle {
-          z-index: 10;
-          opacity: 0.75;
-      }
-      .bgBottom {
-          z-index: 5;
-      }
-      .wave {
-          position: absolute;
-          left: 0;
-          width: 200%;
-          height: 100%;
-          background-repeat: repeat no-repeat;
-          background-position: 0 bottom;
-          transform-origin: center bottom;
-      }
-      .waveTop {
-          background-size: 50% 100px;
-      }
-      .waveAnimation .waveTop {
-        animation: move-wave 3s;
-         -webkit-animation: move-wave 3s;
-         -webkit-animation-delay: 1s;
-         animation-delay: 1s;
-      }
-      .waveMiddle {
-          background-size: 50% 120px;
-      }
-      .waveAnimation .waveMiddle {
-          animation: move_wave 10s linear infinite;
-      }
-      .waveBottom {
-          background-size: 50% 100px;
-      }
-      .waveAnimation .waveBottom {
-          animation: move_wave 15s linear infinite;
-      }
-      </style>
-      
-      
-        <script>
+        }
+        @keyframes move_wave {
+            0% { transform: translateX(0) translateZ(0) scaleY(1) }
+            50% { transform: translateX(-25%) translateZ(0) scaleY(0.55) }
+            100% { transform: translateX(-50%) translateZ(0) scaleY(1) }
+        }
+        .waveWrapper {
+            overflow: hidden;
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            top: 0;
+            margin: auto;
+        }
+        .waveWrapperInner {
+            position: absolute;
+            width: 100%;
+            overflow: hidden;
+            height: 70%;
+        }
+        .bgTop { z-index: 15; opacity: 0.5; }
+        .bgMiddle { z-index: 10; opacity: 0.75; }
+        .bgBottom { z-index: 5; }
+
+        .wave {
+            position: absolute;
+            left: 0;
+            width: 200%;
+            height: 100%;
+            background-repeat: repeat no-repeat;
+            background-position: 0 bottom;
+            transform-origin: center bottom;
+        }
+        .waveTop { background-size: 50% 100px; }
+        .waveAnimation .waveTop {
+            animation: move-wave 3s;
+            -webkit-animation: move-wave 3s;
+            -webkit-animation-delay: 1s;
+            animation-delay: 1s;
+        }
+        .waveMiddle { background-size: 50% 120px; }
+        .waveAnimation .waveMiddle { animation: move_wave 10s linear infinite; }
+
+        .waveBottom { background-size: 50% 100px; }
+        .waveAnimation .waveBottom { animation: move_wave 15s linear infinite; }
+
+    </style>
+
+    <script>
         window.console = window.console || function(t) {};
-      </script>
+    </script>
+
 </head>
 <body>
-    <h1 style=" text-align: center; font:-size: 50px; color:#A1B9A; margin-top: 20px;">
-        TRAMITES CIUDADANOS  ADMINISTRATIVOS BASICOS.
+
+    <h1 style="text-align: center; font-size: 50px; color:#A1B9AA; margin-top: 20px;">
+        TRÁMITES CIUDADANOS ADMINISTRATIVOS BÁSICOS.
     </h1>
-      <section class="gal"><br>
 
-    <main id="galeria" class="galeria">
-        <div class="galeria_item">
-            <a href="ima1.png" data-lightbox="models" data-title="imagen1">
-            <img src="ima1.png" alt="">
-        </a>
-        </div>
+    <section class="gal"><br>
 
-    <div class="galeria_item">
-        <a href="Imagen2.jpg" data-lightbox="models" data-title="imagen2">
-        <img src="Imagen2.jpg" alt="">
-    </a>
-    </div>
+        <main id="galeria" class="galeria">
 
-    <div class="galeria_item">
-        <a href="Ima3.png" data-lightbox="models" data-title="imagen3">
-        <img src="Ima3.png" alt="">
-    </a>
-    </div>
+            <div class="galeria_item">
+                <a href="ima1.png" data-lightbox="models" data-title="imagen1">
+                    <div class="hex"><img src="ima1.png" alt=""></div>
+                </a>
+            </div>
 
-    <div class="galeria_item">
-        <a href="Ima4.png" data-lightbox="models" data-title="imagen4">
-        <img src="Ima4.png" alt="">
-    </a>
-    </div>
+            <div class="galeria_item">
+                <a href="Imagen2.jpg" data-lightbox="models" data-title="imagen2">
+                    <div class="hex"><img src="Imagen2.jpg" alt=""></div>
+                </a>
+            </div>
 
-    <div class="galeria_item">
-        <a href="ima5.png" data-lightbox="models" data-title="imagen5">
-        <img src="ima5.png" alt="">
-    </a>
-    </div>
+            <div class="galeria_item">
+                <a href="Ima3.png" data-lightbox="models" data-title="imagen3">
+                    <div class="hex"><img src="Ima3.png" alt=""></div>
+                </a>
+            </div>
 
-    <div class="galeria_item">
-        <a href="ima6.png" data-lightbox="models" data-title="imagen6">
-        <img src="ima6.png" alt="">
-    </a>
-    </div>
+            <div class="galeria_item">
+                <a href="Ima4.png" data-lightbox="models" data-title="imagen4">
+                    <div class="hex"><img src="Ima4.png" alt=""></div>
+                </a>
+            </div>
 
-    <div class="galeria_item">
-        <a href="ima7.png" data-lightbox="models" data-title="imagen7">
-        <img src="ima7.png" alt="">
-    </a>
-    </div>
+            <div class="galeria_item">
+                <a href="ima5.png" data-lightbox="models" data-title="imagen5">
+                    <div class="hex"><img src="ima5.png" alt=""></div>
+                </a>
+            </div>
 
-    <div class="galeria_item">
-        <a href="ima8.png" data-lightbox="models" data-title="imagen8">
-        <img src="ima8.png" alt="">
-    </a>
-    </div>
+            <div class="galeria_item">
+                <a href="ima6.png" data-lightbox="models" data-title="imagen6">
+                    <div class="hex"><img src="ima6.png" alt=""></div>
+                </a>
+            </div>
 
-    <div class="galeria_item">
-        <a href="ima9.png" data-lightbox="models" data-title="imagen9">
-        <img src="ima9.png" alt="">
-    </a>
-    </div>
-         <div class="galeria_item">
-        <a href="Ima2.png" data-lightbox="models" data-title="imagen2">
-        <img src="Ima2.png" alt="">
-    </a>
-  </div>
-</main>
-        </section>    
+            <div class="galeria_item">
+                <a href="ima7.png" data-lightbox="models" data-title="imagen7">
+                    <div class="hex"><img src="ima7.png" alt=""></div>
+                </a>
+            </div>
+
+            <div class="galeria_item">
+                <a href="ima8.png" data-lightbox="models" data-title="imagen8">
+                    <div class="hex"><img src="ima8.png" alt=""></div>
+                </a>
+            </div>
+
+            <div class="galeria_item">
+                <a href="ima9.png" data-lightbox="models" data-title="imagen9">
+                    <div class="hex"><img src="ima9.png" alt=""></div>
+                </a>
+            </div>
+
+            <div class="galeria_item">
+                <a href="Ima2.png" data-lightbox="models" data-title="imagen2">
+                    <div class="hex"><img src="Ima2.png" alt=""></div>
+                </a>
+            </div>
+
+        </main>
+
+    </section>
+
 </body>
 </html>
