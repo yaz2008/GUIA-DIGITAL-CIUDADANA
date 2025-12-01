@@ -130,7 +130,7 @@ h2{
 }
 
 /* -----------------------------------------------------------
-   HEXÁGONOS (AGREGADO SIN MOVER NADA)
+   🔶 HEXÁGONOS (AGREGADO SIN MOVER LO TUYO)
 ----------------------------------------------------------- */
 
 .hex-container{
@@ -166,14 +166,13 @@ h2{
 .hex img{
     width: 100%;
     height: 100%;
-    border-radius: 0;
     clip-path: inherit;
 }
 
 .hex-texto{
     position: absolute;
     width: 100%;
-    bottom: -40px;
+    bottom: -45px;
     left: 0;
     font-size: 18px;
     font-weight: bold;
