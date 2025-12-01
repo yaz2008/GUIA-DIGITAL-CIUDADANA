@@ -130,21 +130,33 @@ h2{
 }
 
 /* -----------------------------------------------------------
-   PANAL COMPLETO + FONDO (AGREGADO)
+   PANAL COMPLETO + FONDO (CORREGIDO)
 ----------------------------------------------------------- */
 
 .panal-container{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 35px;
+    width: 100%;
     padding: 60px 20px;
-
-    /* Fondo del panal */
     background: url("fondo-panal.jpg");
     background-size: cover;
     background-position: center;
     border-radius: 25px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+}
+
+/* Cada fila del panal */
+.fila{
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+/* Fila desplazada para crear forma de panal */
+.fila.offset{
+    margin-left: 95px;
 }
 
 .hex{
@@ -160,7 +172,7 @@ h2{
         7% 25%
     );
     box-shadow: 0px 8px 25px rgba(0,0,0,0.25);
-    padding: 18px;
+    overflow: hidden;
     position: relative;
     transition: transform .3s;
 }
@@ -172,7 +184,7 @@ h2{
 .hex img{
     width: 100%;
     height: 100%;
-    border-radius: 0;
+    object-fit: cover;
     clip-path: inherit;
 }
 
