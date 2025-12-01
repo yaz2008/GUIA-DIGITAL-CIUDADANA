@@ -7,28 +7,14 @@
     <link rel="stylesheet" href="principal.css">
     <link rel="icon" href="valle.png" type="png">
 
-    <style>
-
-/* ------------------ FONDO VALLE ------------------ */
-.fondo-valle{
-    background-image: linear-gradient(to top, #0593bb 20%, #0e26ae 80%);
-    background-size: cover;
-    background-position: center center;
-    width: 100%;
-    height: 80vh;
-    background-attachment: fixed;
-}
+<style>
 
 /* ------------------ OLAS ------------------ */
 .header {
     position: relative;
     width: 100%;
-    height: 220px;       /* ajustado para celular */
+    height: 220px;
     overflow: hidden;
-}
-
-.inner-header {
-    height: 100%;
 }
 
 .agua {
@@ -36,47 +22,49 @@
     height: 100px;
 }
 
-/* ------------------ CARRUSEL CENTRADO Y VISIBLE ------------------ */
-.gallery2{
-    display: flex;
-    width: 100%;
-    max-width: 350px;
-    height: auto;
-    overflow: hidden;
-    margin: 0 auto;
-    justify-content: center;
-    border-radius: 15px;
-    background-image: url(https://www.xtrafondos.com/descargar.php?id=126&resolucion=1920x1080);
-    background-size: cover;
+/* ------------------ TITULO ------------------ */
+h2 {
+    text-align: center;
+    font-size: 28px;
+    color: #00eaff;
+    margin-bottom: 30px;
+    margin-top: 0;
+    text-shadow: 0 0 10px #00eaff;
+}
 
-    position: relative;
-    z-index: 20;           /* 🔥 lo hace visible */
-    margin-top: 40px;      /* 🔥 evita que quede tapado */
+/* ------------------ CARRUSEL 3D ------------------ */
+.gallery2{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
 }
 
 .content-all{
-    width: 260px;
-    margin: 0 auto;
-    perspective: 800px;
+    width: 280px;
+    height: 300px;
+    perspective: 1000px;
     position: relative;
 }
 
 .content-carrousel{
     width: 100%;
+    height: 100%;
     position: absolute;
-    animation: rotar 10s infinite linear;
     transform-style: preserve-3d;
-
-    left: 50%;
-    transform: translateX(-50%);
+    animation: rotar 18s infinite linear;
 }
 
+/* FIGURAS 3D */
 .content-carrousel figure{
-    width: 100%;
-    height: 160px;
-    overflow: hidden;
+    width: 230px;
+    height: 280px;
     position: absolute;
-    box-shadow: 0px 0px 20px 0px black;
+    left: 25px;
+    top: 10px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
 }
 
 .content-carrousel img{
@@ -85,68 +73,54 @@
     object-fit: cover;
 }
 
-/* ------ MEDIA QUERY CELULARES ------ */
-@media (max-width: 480px){
-  .gallery2{
-    max-width: 300px;
-    margin-top: 20px;
-  }
-  .content-all{
-    width: 220px;
-  }
-  .content-carrousel figure{
-    height: 140px;
-  }
+/* ------------------ POSICIONES 3D ------------------ */
+.content-carrousel figure:nth-child(1){ transform: rotateY(0deg) translateZ(350px); }
+.content-carrousel figure:nth-child(2){ transform: rotateY(40deg) translateZ(350px); }
+.content-carrousel figure:nth-child(3){ transform: rotateY(80deg) translateZ(350px); }
+.content-carrousel figure:nth-child(4){ transform: rotateY(120deg) translateZ(350px); }
+.content-carrousel figure:nth-child(5){ transform: rotateY(160deg) translateZ(350px); }
+.content-carrousel figure:nth-child(6){ transform: rotateY(200deg) translateZ(350px); }
+.content-carrousel figure:nth-child(7){ transform: rotateY(240deg) translateZ(350px); }
+.content-carrousel figure:nth-child(8){ transform: rotateY(280deg) translateZ(350px); }
+.content-carrousel figure:nth-child(9){ transform: rotateY(320deg) translateZ(350px); }
+
+/* ------------------ ANIMACIÓN ------------------ */
+@keyframes rotar {
+    from { transform: rotateY(0deg); }
+    to { transform: rotateY(360deg); }
 }
 
-/* ------ ANIMACIONES ------ */
-@keyframes rotar{
-    from{ transform: rotateY(0deg); }
-    to{ transform: rotateY(360deg); }
-}
-
-/* animación corregida */
-@keyframes move_wave {
-  0% { transform: translateX(0) scaleY(1); }
-  50% { transform: translateX(-25%) scaleY(0.55); }
-  100% { transform: translateX(-50%) scaleY(1); }
-}
-
-    </style>
+</style>
 </head>
 
 <body>
 
+    <!-- ------------------ CABECERA OLAS ------------------ -->
     <div class="header">
-
-        <div class="inner-header flex">
-            <div class="logo"></div>
-        </div>
-
-        <div>
-            <svg class="agua" xmlns="http://www.w3.org/2000/svg" viewBox="0 24 150 28">
-                <defs>
+        <svg class="agua" xmlns="http://www.w3.org/2000/svg" viewBox="0 24 150 28">
+            <defs>
                 <path id="gentle-wave"
                 d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
-                </defs>
-                <g class="parallax">
-                    <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7)" />
-                    <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
-                    <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
-                    <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
-                </g>
-            </svg>
-        </div>
-
+            </defs>
+            <g class="parallax">
+                <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7)" />
+                <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+                <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+                <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+            </g>
+        </svg>
     </div>
 
     <!-- ------------------ CARRUSEL ------------------ -->
     <div id="gallery1" class="gallery2">
         <section>
+
             <h2>"ESTE DOCUMENTO ACREDITA SU IDENTIDAD"</h2>
 
             <div class="content-all">
                 <div class="content-carrousel">
+
+                    <!-- Cambia por tus imágenes -->
                     <figure><img src="Imagen1.jpg"></figure>
                     <figure><img src="Imagen2.jpg"></figure>
                     <figure><img src="Imagen3.jpg"></figure>
@@ -156,13 +130,12 @@
                     <figure><img src="Imagen2.jpg"></figure>
                     <figure><img src="Imagen3.jpg"></figure>
                     <figure><img src="Imagen4.jpg"></figure>
+
                 </div>
             </div>
 
         </section>
     </div>
-
-    <div class="separador"></div>
 
 </body>
 </html>
