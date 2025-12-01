@@ -6,91 +6,6 @@
     <title>Plantel Valle de Bravo</title>
     <link rel="stylesheet" href="principal.css">
     <link rel="icon" href="valle.png" type="png">
-
-<style>
-
-/* ------------------ OLAS ------------------ */
-.header {
-    position: relative;
-    width: 100%;
-    height: 220px;
-    overflow: hidden;
-}
-
-.agua {
-    width: 100%;
-    height: 100px;
-}
-
-/* ------------------ TITULO ------------------ */
-h2 {
-    text-align: center;
-    font-size: 28px;
-    color: #00eaff;
-    margin-bottom: 30px;
-    margin-top: 0;
-    text-shadow: 0 0 10px #00eaff;
-}
-
-/* ------------------ CARRUSEL 3D ------------------ */
-.gallery2{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    margin-top: 60px;
-}
-
-.content-all{
-    width: 280px;
-    height: 300px;
-    perspective: 1000px;
-    position: relative;
-}
-
-.content-carrousel{
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    transform-style: preserve-3d;
-    animation: rotar 18s infinite linear;
-}
-
-/* FIGURAS 3D */
-.content-carrousel figure{
-    width: 230px;
-    height: 280px;
-    position: absolute;
-    left: 25px;
-    top: 10px;
-    overflow: hidden;
-    border-radius: 10px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
-}
-
-.content-carrousel img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-/* ------------------ POSICIONES 3D ------------------ */
-.content-carrousel figure:nth-child(1){ transform: rotateY(0deg) translateZ(350px); }
-.content-carrousel figure:nth-child(2){ transform: rotateY(40deg) translateZ(350px); }
-.content-carrousel figure:nth-child(3){ transform: rotateY(80deg) translateZ(350px); }
-.content-carrousel figure:nth-child(4){ transform: rotateY(120deg) translateZ(350px); }
-.content-carrousel figure:nth-child(5){ transform: rotateY(160deg) translateZ(350px); }
-.content-carrousel figure:nth-child(6){ transform: rotateY(200deg) translateZ(350px); }
-.content-carrousel figure:nth-child(7){ transform: rotateY(240deg) translateZ(350px); }
-.content-carrousel figure:nth-child(8){ transform: rotateY(280deg) translateZ(350px); }
-.content-carrousel figure:nth-child(9){ transform: rotateY(320deg) translateZ(350px); }
-
-/* ------------------ ANIMACIÓN ------------------ */
-@keyframes rotar {
-    from { transform: rotateY(0deg); }
-    to { transform: rotateY(360deg); }
-}
-
-</style>
 </head>
 
 <body>
@@ -112,29 +27,24 @@ h2 {
     </div>
 
     <!-- ------------------ CARRUSEL ------------------ -->
-    <div id="gallery1" class="gallery2">
-        <section>
+    <h2>"ESTE DOCUMENTO ACREDITA SU IDENTIDAD"</h2>
 
-            <h2>"ESTE DOCUMENTO ACREDITA SU IDENTIDAD"</h2>
+    <div class="gallery2">
+        <div class="content-all">
+            <div class="content-carrousel">
 
-            <div class="content-all">
-                <div class="content-carrousel">
+                <figure><img src="Imagen1.jpg"></figure>
+                <figure><img src="Imagen2.jpg"></figure>
+                <figure><img src="Imagen3.jpg"></figure>
+                <figure><img src="Imagen4.jpg"></figure>
+                <figure><img src="Imagen5.jpg"></figure>
+                <figure><img src="Imagen1.jpg"></figure>
+                <figure><img src="Imagen2.jpg"></figure>
+                <figure><img src="Imagen3.jpg"></figure>
+                <figure><img src="Imagen4.jpg"></figure>
 
-                    <!-- Cambia por tus imágenes -->
-                    <figure><img src="Imagen1.jpg"></figure>
-                    <figure><img src="Imagen2.jpg"></figure>
-                    <figure><img src="Imagen3.jpg"></figure>
-                    <figure><img src="Imagen4.jpg"></figure>
-                    <figure><img src="Imagen5.jpg"></figure>
-                    <figure><img src="Imagen1.jpg"></figure>
-                    <figure><img src="Imagen2.jpg"></figure>
-                    <figure><img src="Imagen3.jpg"></figure>
-                    <figure><img src="Imagen4.jpg"></figure>
-
-                </div>
             </div>
-
-        </section>
+        </div>
     </div>
 
 </body>
