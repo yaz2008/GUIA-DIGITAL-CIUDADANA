@@ -38,7 +38,7 @@ img{
     grid-column: 2 / span 2;
 }
 
-/* ✔ Media query corregida */
+/* RESPONSIVE GRID */
 @media screen and (min-width: 270px) and (max-width: 504px){
     .galeria_item:first-of-type{
         grid-column: 1 / span 2;
@@ -86,6 +86,7 @@ img{
 
 
 
+/* FUENTES */
 @import url(//fonts.googleapis.com/css?family=Lato:300:400);
 
 body {
@@ -163,8 +164,7 @@ h1 img{
   background-color: black;
 }
 
-/* Animation */
-
+/* ANIMACIÓN */
 .parallax > use {
   animation: move-forever 25s cubic-bezier(.55,.5,.45,.5) infinite;
 }
@@ -209,9 +209,9 @@ h1 img{
 }
 
 
-/* ------------------------------------------------------------------
-   CARRUSEL 3D
-------------------------------------------------------------------- */
+/* -----------------------------------------------------------
+   CARRUSEL 3D — YA SEPARADO Y MÁS ABAJO
+----------------------------------------------------------- */
 
 .gallery2 {
   display: flex;
@@ -225,8 +225,8 @@ h1 img{
   background-image: url(https://www.xtrafondos.com/descargar.php?id=126&resolucion=1920x1080);
   background-size: cover;
 
-  /* ✅ SEPARADOR PARA BAJARLO */
-  padding-top: 80px;
+  /* ✔ BAJA TODO EL CARRUSEL */
+  padding-top: 120px !important;
 }
 
 h2{
@@ -269,8 +269,8 @@ h2{
   box-shadow: 0px 0px 20px 0px black;
   transition: all 300ms;
 
-  /* ✅ SEPARADOR PARA QUE NO CHOQUEN */
-  margin-top: 30px;
+  /* ✔ BAJA LAS IMÁGENES */
+  margin-top: 60px !important;
 }
 
 .content-carrousel figure:hover{
@@ -279,7 +279,7 @@ h2{
 
 .content-carrousel figure:nth-child(1){transform: rotateY(0deg) translateZ(300px);}
 .content-carrousel figure:nth-child(2){transform: rotateY(40deg) translateZ(300px);}
-content-carrousel figure:nth-child(3){transform: rotateY(80deg) translateZ(300px);}
+.content-carrousel figure:nth-child(3){transform: rotateY(80deg) translateZ(300px);}
 .content-carrousel figure:nth-child(4){transform: rotateY(120deg) translateZ(300px);}
 .content-carrousel figure:nth-child(5){transform: rotateY(160deg) translateZ(300px);}
 .content-carrousel figure:nth-child(6){transform: rotateY(200deg) translateZ(300px);}
@@ -302,17 +302,19 @@ content-carrousel figure:nth-child(3){transform: rotateY(80deg) translateZ(300px
   to{ transform: rotateY(360deg); }
 }
 
-/* ✔ Ajuste extra para móviles chicos */
+
+/* EXTRAS PARA MÓVIL */
 @media (max-width: 480px){
   .gallery2{
     max-width: 300px;
     height: 55vh;
+    padding-top: 140px !important; /* MÁS ESPACIO EN CELULAR */
   }
   .content-all{
     width: 220px;
   }
   .content-carrousel figure{
     height: 140px;
-    margin-top: 40px; /* más separación en celular */
+    margin-top: 80px !important; /* MÁS SEPARACIÓN AÚN */
   }
 }
