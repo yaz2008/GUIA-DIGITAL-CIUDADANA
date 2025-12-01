@@ -10,6 +10,10 @@ img{
     object-fit: cover;
 }
 
+/* -----------------------------------------------------------
+   GALERÍA HEXAGONAL
+----------------------------------------------------------- */
+
 .galeria{
     width: 80%;
     max-width: 1200px;
@@ -84,9 +88,9 @@ img{
     }
 }
 
-
-
-/* FUENTES */
+/* -----------------------------------------------------------
+   FUENTES
+----------------------------------------------------------- */
 @import url(//fonts.googleapis.com/css?family=Lato:300:400);
 
 body {
@@ -164,26 +168,14 @@ h1 img{
   background-color: black;
 }
 
-/* ANIMACIÓN */
+/* ANIMACIÓN DE OLAS */
 .parallax > use {
   animation: move-forever 25s cubic-bezier(.55,.5,.45,.5) infinite;
 }
-.parallax > use:nth-child(1) {
-  animation-delay: -2s;
-  animation-duration: 7s;
-}
-.parallax > use:nth-child(2) {
-  animation-delay: -3s;
-  animation-duration: 10s;
-}
-.parallax > use:nth-child(3) {
-  animation-delay: -4s;
-  animation-duration: 13s;
-}
-.parallax > use:nth-child(4) {
-  animation-delay: -5s;
-  animation-duration: 20s;
-}
+.parallax > use:nth-child(1) { animation-delay: -2s; animation-duration: 7s; }
+.parallax > use:nth-child(2) { animation-delay: -3s; animation-duration: 10s; }
+.parallax > use:nth-child(3) { animation-delay: -4s; animation-duration: 13s; }
+.parallax > use:nth-child(4) { animation-delay: -5s; animation-duration: 20s; }
 
 @keyframes move-forever {
   0% { transform: translate3d(-90px,0,0); }
@@ -208,9 +200,8 @@ h1 img{
   height: 18px;
 }
 
-
 /* -----------------------------------------------------------
-   CARRUSEL 3D — YA SEPARADO Y MÁS ABAJO
+   CARRUSEL 3D (CORREGIDO Y BAJADO)
 ----------------------------------------------------------- */
 
 .gallery2 {
@@ -224,9 +215,6 @@ h1 img{
   border-radius:15px;
   background-image: url(https://www.xtrafondos.com/descargar.php?id=126&resolucion=1920x1080);
   background-size: cover;
-
-  /* ✔ BAJA TODO EL CARRUSEL */
-  padding-top: 120px !important;
 }
 
 h2{
@@ -243,7 +231,9 @@ h2{
   margin: 0 auto;
   perspective: 800px;
   position: relative;
-  margin-top: 50px;
+
+  /* ✔ ESTA ES LA CORRECCIÓN QUE BAJA TODO EL CARRUSEL */
+  padding-top: 150px;
 }
 
 .content-carrousel{
@@ -251,7 +241,6 @@ h2{
   position: absolute;
   animation: rotar 10s infinite linear;
   transform-style: preserve-3d;
-
   left: 50%;
   transform: translateX(-50%);
 }
@@ -269,8 +258,8 @@ h2{
   box-shadow: 0px 0px 20px 0px black;
   transition: all 300ms;
 
-  /* ✔ BAJA LAS IMÁGENES */
-  margin-top: 60px !important;
+  /* ✔ SEPARACIÓN EXTRA */
+  margin-top: 60px;
 }
 
 .content-carrousel figure:hover{
@@ -302,19 +291,20 @@ h2{
   to{ transform: rotateY(360deg); }
 }
 
-
-/* EXTRAS PARA MÓVIL */
+/* -----------------------------------------------------------
+   MÓVIL
+----------------------------------------------------------- */
 @media (max-width: 480px){
   .gallery2{
     max-width: 300px;
     height: 55vh;
-    padding-top: 140px !important; /* MÁS ESPACIO EN CELULAR */
   }
   .content-all{
     width: 220px;
+    padding-top: 180px; /* MÁS ESPACIO EN CELULAR */
   }
   .content-carrousel figure{
     height: 140px;
-    margin-top: 80px !important; /* MÁS SEPARACIÓN AÚN */
+    margin-top: 80px;
   }
 }
