@@ -210,13 +210,13 @@ h1 img{
 
 
 /* ------------------------------------------------------------------
-   ✔ CORRECCIÓN DEL CARRUSEL – YA CENTRADO EN CELULAR
+   CARRUSEL 3D
 ------------------------------------------------------------------- */
 
 .gallery2 {
   display: flex;
-  width: 100%;                /* antes 1200px */
-  max-width: 350px;           /* tamaño real para móvil */
+  width: 100%;
+  max-width: 350px;
   height: 60vh;
   overflow: hidden;
   margin: 0 auto;
@@ -224,6 +224,9 @@ h1 img{
   border-radius:15px;
   background-image: url(https://www.xtrafondos.com/descargar.php?id=126&resolucion=1920x1080);
   background-size: cover;
+
+  /* ✅ SEPARADOR PARA BAJARLO */
+  padding-top: 80px;
 }
 
 h2{
@@ -237,14 +240,14 @@ h2{
 
 .content-all{
   width: 260px;
-  margin: 0 auto;             /* centrado */
+  margin: 0 auto;
   perspective: 800px;
   position: relative;
   margin-top: 50px;
 }
 
 .content-carrousel{
-  width: 100%;                /* antes 50% */
+  width: 100%;
   position: absolute;
   animation: rotar 10s infinite linear;
   transform-style: preserve-3d;
@@ -265,6 +268,9 @@ h2{
   position: absolute;
   box-shadow: 0px 0px 20px 0px black;
   transition: all 300ms;
+
+  /* ✅ SEPARADOR PARA QUE NO CHOQUEN */
+  margin-top: 30px;
 }
 
 .content-carrousel figure:hover{
@@ -273,7 +279,7 @@ h2{
 
 .content-carrousel figure:nth-child(1){transform: rotateY(0deg) translateZ(300px);}
 .content-carrousel figure:nth-child(2){transform: rotateY(40deg) translateZ(300px);}
-.content-carrousel figure:nth-child(3){transform: rotateY(80deg) translateZ(300px);}
+content-carrousel figure:nth-child(3){transform: rotateY(80deg) translateZ(300px);}
 .content-carrousel figure:nth-child(4){transform: rotateY(120deg) translateZ(300px);}
 .content-carrousel figure:nth-child(5){transform: rotateY(160deg) translateZ(300px);}
 .content-carrousel figure:nth-child(6){transform: rotateY(200deg) translateZ(300px);}
@@ -306,6 +312,7 @@ h2{
     width: 220px;
   }
   .content-carrousel figure{
-    height: 140px;
-  }
+    height: 140px;
+    margin-top: 40px; /* más separación en celular */
+  }
 }
