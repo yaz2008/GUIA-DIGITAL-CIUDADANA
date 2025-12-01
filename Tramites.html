@@ -6,10 +6,10 @@
     <title>Tramites</title>
     <link rel="stylesheet" href="principal.css">
     <link rel="icon" href="img/unnamed-removebg-preview.png" type="png">
-    <a href="OPDAPAS.html"></a>
- 
+
     <style>
-   
+
+        /* --- FONDO ORIGINAL --- */
         .fondo-valle{
             background-image: linear-gradient(to top, #0593bb 20%, #0e26ae 80%);
             background-size: cover;
@@ -28,156 +28,103 @@
             align-items: center;
         }
 
-      @keyframes move_wave {
-          0% { transform: translateX(0) translateZ(0) scaleY(1) }
-          50% { transform: translateX(-25%) translateZ(0) scaleY(0.55) }
-          100% { transform: translateX(-50%) translateZ(0) scaleY(1) }
-      }
+        @keyframes move_wave {
+            0% { transform: translateX(0) scaleY(1) }
+            50% { transform: translateX(-25%) scaleY(0.55) }
+            100% { transform: translateX(-50%) scaleY(1) }
+        }
 
-      .waveWrapper {
-          overflow: hidden;
-          position: absolute;
-          left: 0;
-          right: 0;
-          bottom: 0;
-          top: 0;
-          margin: auto;
-      }
+        /* ------------------------------------------------- */
+        /*            FONDO DETRÁS DEL PANAL                */
+        /* ------------------------------------------------- */
+        .fondo-panal{
+            width: 100%;
+            padding: 60px 0;
+            background: linear-gradient(135deg, #d1e9ff 0%, #b6d7ff 50%, #d1e9ff 100%);
+            background-size: cover;
+        }
 
-      .waveWrapperInner {
-          position: absolute;
-          width: 100%;
-          overflow: hidden;
-          height: 70%;
-      }
+        /* ------------------------------------------------- */
+        /*               PANAL HEXAGONAL                     */
+        /* ------------------------------------------------- */
 
-      .bgTop { z-index: 15; opacity: 0.5; }
-      .bgMiddle { z-index: 10; opacity: 0.75; }
-      .bgBottom { z-index: 5; }
+        .panal{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            max-width: 900px;
+            margin: auto;
+        }
 
-      .wave {
-          position: absolute;
-          left: 0;
-          width: 200%;
-          height: 100%;
-          background-repeat: repeat no-repeat;
-          background-position: 0 bottom;
-          transform-origin: center bottom;
-      }
+        .hex{
+            width: 160px;
+            height: 140px;
+            clip-path: polygon(
+                50% 0%,
+                93% 25%,
+                93% 75%,
+                50% 100%,
+                7% 75%,
+                7% 25%
+            );
+            overflow: hidden;
+            background: white;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.25);
+        }
 
-      .waveTop { background-size: 50% 100px; }
-      .waveAnimation .waveTop {
-          animation: move-wave 3s;
-          -webkit-animation: move-wave 3s;
-          -webkit-animation-delay: 1s;
-          animation-delay: 1s;
-      }
+        .hex img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
 
-      .waveMiddle { background-size: 50% 120px; }
-      .waveAnimation .waveMiddle {
-          animation: move_wave 10s linear infinite;
-      }
+        .fila{
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
 
-      .waveBottom { background-size: 50% 100px; }
-      .waveAnimation .waveBottom {
-          animation: move_wave 15s linear infinite;
-      }
+        .fila2{
+            margin-top: 40px;
+        }
+
     </style>
-
-    <script>
-        window.console = window.console || function(t) {};
-    </script>
-
 </head>
 <body>
 
-    <h1 style=" text-align: center; font-size: 50px; color:#A1B9A; margin-top: 20px;">
+    <h1 style="text-align: center; font-size: 50px; color:#000; margin-top: 20px;">
         TRAMITES CIUDADANOS ADMINISTRATIVOS BASICOS.
     </h1>
 
-    <section class="gal"><br>
+    <!-- 🔵 FONDO DETRÁS DEL PANAL -->
+    <div class="fondo-panal">
 
-    <main id="galeria" class="galeria">
+        <!-- 🌟 PANAL HEXAGONAL COMPLETO -->
+        <div class="panal">
 
-        <div class="galeria_item">
-            <a href="ima1.png" data-lightbox="models" data-title="imagen1">
-                <img src="ima1.png" alt="">
-            </a>
+            <div class="fila fila1">
+                <div class="hex"><img src="ima1.png"></div>
+                <div class="hex"><img src="Imagen2.jpg"></div>
+                <div class="hex"><img src="Ima3.png"></div>
+            </div>
+
+            <div class="fila fila2">
+                <div class="hex"><img src="Ima4.png"></div>
+                <div class="hex"><img src="ima5.png"></div>
+                <div class="hex"><img src="ima6.png"></div>
+                <div class="hex"><img src="ima7.png"></div>
+            </div>
+
+            <div class="fila fila3">
+                <div class="hex"><img src="ima8.png"></div>
+                <div class="hex"><img src="ima9.png"></div>
+                <div class="hex"><img src="Ima2.png"></div>
+            </div>
+
         </div>
 
-        <div class="galeria_item">
-            <a href="Imagen2.jpg" data-lightbox="models" data-title="imagen2">
-                <img src="Imagen2.jpg" alt="">
-            </a>
-        </div>
-
-        <div class="galeria_item">
-            <a href="Ima3.png" data-lightbox="models" data-title="imagen3">
-                <img src="Ima3.png" alt="">
-            </a>
-        </div>
-
-        <div class="galeria_item">
-            <a href="Ima4.png" data-lightbox="models" data-title="imagen4">
-                <img src="Ima4.png" alt="">
-            </a>
-        </div>
-
-        <div class="galeria_item">
-            <a href="ima5.png" data-lightbox="models" data-title="imagen5">
-                <img src="ima5.png" alt="">
-            </a>
-        </div>
-
-        <div class="galeria_item">
-            <a href="ima6.png" data-lightbox="models" data-title="imagen6">
-                <img src="ima6.png" alt="">
-            </a>
-        </div>
-
-        <div class="galeria_item">
-            <a href="ima7.png" data-lightbox="models" data-title="imagen7">
-                <img src="ima7.png" alt="">
-            </a>
-        </div>
-
-        <div class="galeria_item">
-            <a href="ima8.png" data-lightbox="models" data-title="imagen8">
-                <img src="ima8.png" alt="">
-            </a>
-        </div>
-
-        <div class="galeria_item">
-            <a href="ima9.png" data-lightbox="models" data-title="imagen9">
-                <img src="ima9.png" alt="">
-            </a>
-        </div>
-
-        <div class="galeria_item">
-            <a href="Ima2.png" data-lightbox="models" data-title="imagen2">
-                <img src="Ima2.png" alt="">
-            </a>
-        </div>
-
-    </main>
-    </section>
-
-    <!-- ⭐⭐⭐ PANAL AÑADIDO DEBAJO, SIN MOVER NADA ⭐⭐⭐ -->
-    <section class="panal-container">
-
-        <div class="hex"><img src="ima1.png"></div>
-        <div class="hex"><img src="Imagen2.jpg"></div>
-        <div class="hex"><img src="Ima3.png"></div>
-        <div class="hex"><img src="Ima4.png"></div>
-        <div class="hex"><img src="ima5.png"></div>
-        <div class="hex"><img src="ima6.png"></div>
-        <div class="hex"><img src="ima7.png"></div>
-        <div class="hex"><img src="ima8.png"></div>
-        <div class="hex"><img src="ima9.png"></div>
-        <div class="hex"><img src="Ima2.png"></div>
-
-    </section>
-    <!-- FIN DEL PANAL -->
+    </div>
 
 </body>
 </html>
