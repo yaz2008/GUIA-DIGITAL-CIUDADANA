@@ -5,159 +5,164 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Plantel Valle de Bravo</title>
     <link rel="stylesheet" href="principal.css">
-      <link rel="icon" href="valle.png" type="png">
-    <a href="OPDAPAS.html"></a>
- 
+    <link rel="icon" href="valle.png" type="png">
+
     <style>
-   
-        .fondo-valle{
-            background-image: linear-gradient(to top, #0593bb 20%, #0e26ae 80%);
-            background-size: cover;
-            background-position: center center;
-            width: 100%;
-            height: 80vh;
-            background-attachment: fixed;
-          }
-        .contenido-fondo-valle{
-            display: flex;
-            width: 100%;
-            height: 100%;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-          }
-      @keyframes move_wave {
-          0% {
-              transform: translateX(0) translateZ(0) scaleY(1)
-          }
-          50% {
-              transform: translateX(-25%) translateZ(0) scaleY(0.55)
-          }
-          100% {
-              transform: translateX(-50%) translateZ(0) scaleY(1)
-          }
-      }
-      .waveWrapper {
-          overflow: hidden;
-          position: absolute;
-          left: 0;
-          right: 0;
-          bottom: 0;
-          top: 0;
-          margin: auto;
-      }
-      .waveWrapperInner {
-          position: absolute;
-          width: 100%;
-          overflow: hidden;
-          height: 70%;
-    
-          
-      }
-      .bgTop {
-          z-index: 15;
-          opacity: 0.5;
-      }
-      .bgMiddle {
-          z-index: 10;
-          opacity: 0.75;
-      }
-      .bgBottom {
-          z-index: 5;
-      }
-      .wave {
-          position: absolute;
-          left: 0;
-          width: 200%;
-          height: 100%;
-          background-repeat: repeat no-repeat;
-          background-position: 0 bottom;
-          transform-origin: center bottom;
-      }
-      .waveTop {
-          background-size: 50% 100px;
-      }
-      .waveAnimation .waveTop {
-        animation: move-wave 3s;
-         -webkit-animation: move-wave 3s;
-         -webkit-animation-delay: 1s;
-         animation-delay: 1s;
-      }
-      .waveMiddle {
-          background-size: 50% 120px;
-      }
-      .waveAnimation .waveMiddle {
-          animation: move_wave 10s linear infinite;
-      }
-      .waveBottom {
-          background-size: 50% 100px;
-      }
-      .waveAnimation .waveBottom {
-          animation: move_wave 15s linear infinite;
-      }
-      </style>
-      
-      
-        <script>
-        window.console = window.console || function(t) {};
-      </script>
+
+/* ------------------ FONDO VALLE ------------------ */
+.fondo-valle{
+    background-image: linear-gradient(to top, #0593bb 20%, #0e26ae 80%);
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    height: 80vh;
+    background-attachment: fixed;
+}
+
+/* ------------------ OLAS ------------------ */
+.header {
+    position: relative;
+    width: 100%;
+    height: 220px;       /* ajustado para celular */
+    overflow: hidden;
+}
+
+.inner-header {
+    height: 100%;
+}
+
+.agua {
+    width: 100%;
+    height: 100px;
+}
+
+/* ------------------ CARRUSEL CENTRADO Y VISIBLE ------------------ */
+.gallery2{
+    display: flex;
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    overflow: hidden;
+    margin: 0 auto;
+    justify-content: center;
+    border-radius: 15px;
+    background-image: url(https://www.xtrafondos.com/descargar.php?id=126&resolucion=1920x1080);
+    background-size: cover;
+
+    position: relative;
+    z-index: 20;           /* 🔥 lo hace visible */
+    margin-top: 40px;      /* 🔥 evita que quede tapado */
+}
+
+.content-all{
+    width: 260px;
+    margin: 0 auto;
+    perspective: 800px;
+    position: relative;
+}
+
+.content-carrousel{
+    width: 100%;
+    position: absolute;
+    animation: rotar 10s infinite linear;
+    transform-style: preserve-3d;
+
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.content-carrousel figure{
+    width: 100%;
+    height: 160px;
+    overflow: hidden;
+    position: absolute;
+    box-shadow: 0px 0px 20px 0px black;
+}
+
+.content-carrousel img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ------ MEDIA QUERY CELULARES ------ */
+@media (max-width: 480px){
+  .gallery2{
+    max-width: 300px;
+    margin-top: 20px;
+  }
+  .content-all{
+    width: 220px;
+  }
+  .content-carrousel figure{
+    height: 140px;
+  }
+}
+
+/* ------ ANIMACIONES ------ */
+@keyframes rotar{
+    from{ transform: rotateY(0deg); }
+    to{ transform: rotateY(360deg); }
+}
+
+/* animación corregida */
+@keyframes move_wave {
+  0% { transform: translateX(0) scaleY(1); }
+  50% { transform: translateX(-25%) scaleY(0.55); }
+  100% { transform: translateX(-50%) scaleY(1); }
+}
+
+    </style>
 </head>
+
 <body>
+
     <div class="header">
 
-        <!--Content before waves-->
         <div class="inner-header flex">
-            <div class="logo">
-            </div>
-            <center>
-       
-    </center>
+            <div class="logo"></div>
         </div>
-        
-        <!--Waves Container-->
+
         <div>
-        <svg class="agua" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-        viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
-        <defs>
-        <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
-        </defs>
-        <g class="parallax">
-        <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
-        <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
-        <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
-        <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
-        </g>
-        </svg>
+            <svg class="agua" xmlns="http://www.w3.org/2000/svg" viewBox="0 24 150 28">
+                <defs>
+                <path id="gentle-wave"
+                d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+                </defs>
+                <g class="parallax">
+                    <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7)" />
+                    <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+                    <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+                    <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+                </g>
+            </svg>
         </div>
-        </div>
-   
 
+    </div>
 
-        
-        <div id="gallery1" class="gallery2">
-            <section >
-    
-                <h2>"ESTE DOCUMENTO ACREDITA SU IDENTIDAD"</h2>
-                <div class="content-all">
-                    <div class="content-carrousel">
-                       <figure><img src="1magen1.jpg"></figure>
-                        <figure><img src="Imagen2.jpg"></figure>
-                        <figure><img src="Imagen3.jpg"></figure>
-                        <figure><img src="Imagen4.jpg"></figure>
-                        <figure><img src="Imagen5.jpg"></figure>
-                        <figure><img src="Imagen1.jpg"></figure>
-                        <figure><img src="Imagen2.jpg"></figure>
-                        <figure><img src="Imagen3.jpg"></figure>
-                        <figure><img src="Imagen4.jpg"></figure>
-                    </div>
+    <!-- ------------------ CARRUSEL ------------------ -->
+    <div id="gallery1" class="gallery2">
+        <section>
+            <h2>"ESTE DOCUMENTO ACREDITA SU IDENTIDAD"</h2>
+
+            <div class="content-all">
+                <div class="content-carrousel">
+                    <figure><img src="1magen1.jpg"></figure>
+                    <figure><img src="Imagen2.jpg"></figure>
+                    <figure><img src="Imagen3.jpg"></figure>
+                    <figure><img src="Imagen4.jpg"></figure>
+                    <figure><img src="Imagen5.jpg"></figure>
+                    <figure><img src="Imagen1.jpg"></figure>
+                    <figure><img src="Imagen2.jpg"></figure>
+                    <figure><img src="Imagen3.jpg"></figure>
+                    <figure><img src="Imagen4.jpg"></figure>
                 </div>
-                
-            </section>
             </div>
-       
-    
+
+        </section>
+    </div>
+
     <div class="separador"></div>
 
-      
 </body>
 </html>
