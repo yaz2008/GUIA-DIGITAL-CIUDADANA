@@ -293,12 +293,14 @@
 <div class="modal" id="modal">
   <button class="close" id="closeModal">X</button>
 
-  <div class="video-wrap">
-    <video id="videoPlayer" controls>
-      <source src="https://drive.google.com/file/d/100Ej7qqw6pq0ZXE-PQ7xJiyLDh9Dksrw/preview.mp4" type="video/mp4">
-      Tu navegador no soporta video.
-    </video>
-  </div>
+     <!-- Video responsivo -->
+    <div class="video-container">
+      <iframe 
+        src="https://drive.google.com/file/d/100Ej7qqw6pq0ZXE-PQ7xJiyLDh9Dksrw/preview"
+        allow="autoplay; encrypted-media"
+        title="Video desde Google Drive">
+      </iframe>
+      </div>
 </div>
 
 <script>
